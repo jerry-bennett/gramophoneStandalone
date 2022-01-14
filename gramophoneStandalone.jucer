@@ -5,6 +5,15 @@
               jucerFormatVersion="1">
   <MAINGROUP id="eNazHA" name="gramophoneStandalone">
     <GROUP id="{08F61CC7-2DC7-E5B3-5E9E-4454D0BD24A0}" name="Source">
+      <GROUP id="{41DF44A2-4355-44C0-5583-279A775966AE}" name="AudioFile">
+        <FILE id="cvZipd" name="AudioFile.hpp" compile="0" resource="0" file="Source/AudioFile/AudioFile.hpp"/>
+        <FILE id="p2XUg5" name="bw64.hpp" compile="0" resource="0" file="Source/AudioFile/bw64.hpp"/>
+        <FILE id="FFqwyO" name="chunks.hpp" compile="0" resource="0" file="Source/AudioFile/chunks.hpp"/>
+        <FILE id="xjgZps" name="parser.hpp" compile="0" resource="0" file="Source/AudioFile/parser.hpp"/>
+        <FILE id="T2SQxr" name="reader.hpp" compile="0" resource="0" file="Source/AudioFile/reader.hpp"/>
+        <FILE id="wr9Ogj" name="utils.hpp" compile="0" resource="0" file="Source/AudioFile/utils.hpp"/>
+        <FILE id="DOaNxG" name="writer.hpp" compile="0" resource="0" file="Source/AudioFile/writer.hpp"/>
+      </GROUP>
       <GROUP id="{45006861-FED1-EC8E-66BC-D96B8ACD92A5}" name="libs">
         <GROUP id="{F2FB005C-0B08-E728-029E-304C62253418}" name="PolyBLEP"/>
         <FILE id="gTQ9WN" name="fft.cpp" compile="1" resource="0" file="Source/libs/fft.cpp"/>

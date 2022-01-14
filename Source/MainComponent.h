@@ -4,6 +4,7 @@
 #include "maximilian.h"
 #include "Biquad.h"
 #include "Biquad2.h"
+#include "AudioFile/AudioFile.hpp"
 
 //==============================================================================
 /*
@@ -21,15 +22,15 @@ public:
     void prepareToPlay (int samplesPerBlockExpected, double sampleRate) override;
     void getNextAudioBlock (const juce::AudioSourceChannelInfo& bufferToFill) override;
     void releaseResources() override;
+    void exportWavFile(juce::AudioBuffer<float> buffer, juce::File file);
 
     //==============================================================================
     void paint (juce::Graphics& g) override;
     void resized() override;
+    
 
 private:
     //==============================================================================
-    // Your private member variables go here...
-    maxiOsc testOsc;
     
     float freqVal;
     float QVal;
@@ -46,6 +47,12 @@ private:
     maxiFilter filter;
     Biquad biquad1;
     Biquad2 biquad2;
-
+    
+    maxiOsc testOsc;
+    //member variables for saving file
+    //providing full, absolute path seems to cause an error on my system.
+    //juce::File file = juce::File("/users/USERNAME/JuceTestPlugins/SaveAudioFile/Source");
+    juce::File file = juce::File::getCurrentWorkingDirectory().getChildFile ("Gramophone_Processed.wav");
+    
     JUCE_DECLARE_NON_COPYABLE_WITH_LEAK_DETECTOR (MainComponent)
 };

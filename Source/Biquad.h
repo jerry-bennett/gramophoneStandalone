@@ -1,16 +1,3 @@
-/*
-    This class implements the RBJ Audio EQ Cookbook Formulas
-
-        http://shepazu.github.io/Audio-EQ-Cookbook/audio-eq-cookbook.html
- 
-    There are options for all of the standard filter types: LPF, HPF, etc. These
-    filters are great as the building blocks for more complicated (i.e. higher
-    order) filters because the RBJ filters are stable and work will when
-    parameters are changed.
- 
-    Note: A Butterworth filter (flat passband) can be created by setting the RBJ
-    filter's Q=sqrt(2)/2
-*/
 
 #pragma once
 #include "../JuceLibraryCode/JuceHeader.h"
